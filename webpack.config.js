@@ -87,6 +87,7 @@ module.exports = {
             _config: config,
             _src: src,
             _components: path.join(app, 'components'),
+            _services: path.join(app, 'services'),
             _views: path.join(app, 'views'),
             _assets: path.join(src, 'assets'),
             _img: path.join(src, 'assets', 'images'),

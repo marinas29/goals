@@ -1,12 +1,25 @@
 <template>
-  
+    <div class="home">
+        <districts></districts>
+    </div>
 </template>
 <script>
-export default {
+    import Districts from '_components/Districts.vue'
 
-}
+    export default {
+        name: 'home',
+        components: {
+            Districts
+        }
+    }
 </script>
 
-<style lang="sass" scoped>
+<style scoped>
+    @import '~_assets/css/base.css';
 
+    .home {
+        position: relative;
+        height: 100%;
+        padding: 20px;
+    }
 </style>
