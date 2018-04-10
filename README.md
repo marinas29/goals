@@ -1,4 +1,4 @@
-# goals
+# Goals
 
 > A Vue.js project
 
