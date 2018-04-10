@@ -35,7 +35,7 @@ export default {
             }
 
             &:checked ~ .accordion__content {
-                max-height: 400px;
+                max-height: 100%;
                 border-bottom: 1px solid $color-blue--base;
             }
         }
@@ -45,23 +45,36 @@ export default {
             height: auto;
             display: block;
             position: relative;
-            padding-left: 12px;
+            padding-left: 15px;
+            padding-right: 50px;
             background: $color-blue--base;
             font-family: 'Open Sans Condensed', sans-serif;
             font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
 
+            @media screen and (max-width: $screen-md) {
+                padding-right: 25px;
+                line-height: 30px;
+                font-size: 1rem;
+            }
+
             &:after {
                 content: '+';
                 position: absolute;
                 right: 0;
                 top: 0;
-                display: block;
                 width: 50px;
-                height: 50px;
-                text-align: center;
+                height: 100%;
                 transition: transform .5s;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: $screen-md) {
+                    width: 25px;
+                }
             }
         }
 
@@ -75,6 +88,12 @@ export default {
     
             &__description {
                 padding: 20px;
+                font-size: 1rem;
+
+                @media screen and (max-width: $screen-md) {
+                    font-size: 0.8rem;
+                    padding: 15px;
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
     <div class="info">
         <div class="info__districts">
             <template v-if="!isLoading">
-                <p class="info__districts__title">Please, select your district:</p>
+                <p class="info__districts__title">Selecione um distrito:</p>
                 <select v-model="districtId" @change="listGoals(districtId)" class="info__districts__select">
                     <option v-for="(district, d) in districts" :key="d" :value="district.id">
                         {{ district.name }}
@@ -75,8 +75,19 @@
             justify-content: center;
             padding-bottom: 20px;
 
+            @media screen and (max-width: $screen-sm) {
+                flex-direction: column;
+            }
+
             &__title {
                 padding-right: 15px;
+
+                @media screen and (max-width: $screen-sm) {
+                    padding-right: 0;
+                    padding-bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+                }
             }
 
             &__select {
