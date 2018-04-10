@@ -14,7 +14,7 @@
             </template>
         </div>
         <div class="info__goals">
-            <goals v-for="(goal, g) in goals" :item="goal" :key="g"></goals>
+            <goals v-for="(item, g) in goals" :goal="item" :key="g"></goals>
         </div>
     </div>
 </template>
