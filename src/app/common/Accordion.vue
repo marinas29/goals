@@ -18,11 +18,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    @import '~_assets/scss/_vars.scss';
+
     .accordion {
         position: relative;
         width: 100%;
-        color: #ffffff;
-        border-bottom: 1px solid #ffffff;
+        color: $color-white--base;
+        border-bottom: 1px solid $color-white--base;
         overflow: hidden;
 
         &__radio {
@@ -33,8 +35,8 @@ export default {
             }
 
             &:checked ~ .accordion__content {
-                max-height: 350px;
-                border-bottom: 1px solid #353b48;
+                max-height: 400px;
+                border-bottom: 1px solid $color-blue--base;
             }
         }
 
@@ -44,7 +46,9 @@ export default {
             display: block;
             position: relative;
             padding-left: 12px;
-            background: #353b48;
+            background: $color-blue--base;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
 
@@ -57,16 +61,16 @@ export default {
                 width: 50px;
                 height: 50px;
                 text-align: center;
-                transition: all .5s;
+                transition: transform .5s;
             }
         }
 
         &__content {
-            max-height: 0;
             overflow: hidden;
-            color: #353b48;
-            background: #ffffff;
-            border-bottom: 1px solid #ffffff;
+            background: $color-white--base;
+            color: $color-blue--base;
+            max-height: 0;
+            border-bottom: 1px solid $color-white--base;
             transition: border-bottom .4s, max-height .4s;
     
             &__description {
@@ -74,13 +78,4 @@ export default {
             }
         }
     }
-
-    // .accordion__radio:checked ~ .accordion__content {
-    //     max-height: 350px;
-    //     border-bottom: 1px solid #353b48;
-    // }
-
-    // .accordion__radio:checked + .accordion__title::after {
-    //     transform: rotate(360deg);
-    // }
 </style>

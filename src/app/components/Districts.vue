@@ -63,6 +63,7 @@
 </script>
 <style lang="scss" scoped>
     @import '~_assets/css/loader.css';
+    @import '~_assets/scss/_vars.scss';
 
     .info {
         display: flex;
@@ -83,10 +84,10 @@
                 width: 200px;
                 height: 40px;
                 
-                font-size: 14px;
-                color: #353b48;
-                background-color: #fff;
-                border: 1px solid #cccccc;
+                font-size: 1rem;
+                color: $color-blue--base;
+                background-color: $color-white--base;
+                border: 1px solid $color-grey--base;
             }
         }
 
