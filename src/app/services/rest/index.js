@@ -7,9 +7,7 @@ export default {
 
         return fetch(url)
             .then(response => response.json())
-            .then(response => response)
             .catch(error => error.json())
-            .catch(error => error)
     },
 
     getGoals (districtId) {
@@ -17,8 +15,6 @@ export default {
 
         return fetch(url)
             .then(response => response.json())
-            .then(response => response)
             .catch(error => error.json())
-            .catch(error => error)
     }
 }
